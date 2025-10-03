@@ -1,0 +1,451 @@
+/* 人力资源管理系统统一样式文件 */
+
+/* 系统容器样式 */
+.hr-system-container {
+  padding: 20px;
+  background-color: var(--bg-primary);
+  min-height: 100vh;
+}
+
+/* 系统标题样式 */
+.hr-system-title {
+  color: var(--text-primary);
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 24px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid var(--primary-color);
+}
+
+/* 导航栏样式 */
+.hr-system-nav {
+  background-color: var(--bg-secondary);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 20px;
+}
+
+.hr-system-nav-list {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  overflow-x: auto;
+}
+
+.hr-system-nav-item {
+  flex-shrink: 0;
+}
+
+.hr-system-nav-link {
+  display: block;
+  padding: 14px 20px;
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-size: 14px;
+  border-bottom: 2px solid transparent;
+}
+
+.hr-system-nav-link:hover {
+  color: var(--primary-color);
+  background-color: var(--border-light);
+}
+
+.hr-system-nav-link-active {
+  color: var(--primary-color);
+  border-bottom-color: var(--primary-color);
+  background-color: var(--border-light);
+  font-weight: 500;
+}
+
+/* 主要内容区域样式 */
+.hr-system-content {
+  background-color: var(--bg-secondary);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  padding: 24px;
+}
+
+/* 头部操作栏样式 */
+.hr-system-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  gap: 12px;
+  background-color: var(--bg-secondary);
+  padding: 16px 20px;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+}
+
+/* 搜索区域样式 */
+.hr-system-search-area {
+  flex: 1;
+  min-width: 200px;
+}
+
+/* 操作按钮组样式 */
+.hr-system-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* 数据表格容器样式 */
+.hr-system-table-container {
+  background-color: var(--bg-secondary);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  padding: 20px;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+/* 分页区域样式 */
+.hr-system-pagination {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 0;
+}
+
+/* 按钮样式统一定义 */
+.hr-btn {
+  font-family: inherit;
+  font-size: 14px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+}
+
+.hr-btn-primary {
+  background-color: var(--primary-color);
+  color: var(--text-white);
+}
+
+.hr-btn-primary:hover {
+  background-color: var(--primary-hover);
+  transform: translateY(-1px);
+}
+
+.hr-btn-secondary {
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+}
+
+.hr-btn-secondary:hover {
+  background-color: var(--border-light);
+  border-color: var(--primary-color);
+}
+
+.hr-btn-success {
+  background-color: var(--success-color);
+  color: var(--text-white);
+}
+
+.hr-btn-success:hover {
+  background-color: #229954;
+}
+
+.hr-btn-danger {
+  background-color: var(--danger-color);
+  color: var(--text-white);
+}
+
+.hr-btn-danger:hover {
+  background-color: #c0392b;
+}
+
+.hr-btn-warning {
+  background-color: var(--warning-color);
+  color: var(--text-white);
+}
+
+.hr-btn-warning:hover {
+  background-color: #e67e22;
+}
+
+.hr-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* 表单样式 */
+.hr-form {
+  display: grid;
+  gap: 16px;
+}
+
+.hr-form-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+.hr-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.hr-form-label {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.hr-form-input,
+.hr-form-select,
+.hr-form-textarea {
+  padding: 8px 12px;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  font-size: 14px;
+  transition: border-color 0.3s ease;
+}
+
+.hr-form-input:focus,
+.hr-form-select:focus,
+.hr-form-textarea:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.1);
+}
+
+.hr-form-textarea {
+  min-height: 80px;
+  resize: vertical;
+}
+
+/* 模态框内容样式 */
+.hr-modal-content {
+  padding: 20px;
+}
+
+.hr-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.hr-modal-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.hr-modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 24px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border-color);
+}
+
+/* 状态标签样式 */
+.hr-status-tag {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.hr-status-active {
+  background-color: #d5f4e6;
+  color: #27ae60;
+}
+
+.hr-status-inactive {
+  background-color: #f5f5f5;
+  color: #666;
+}
+
+.hr-status-expired {
+  background-color: #fee;
+  color: #e74c3c;
+}
+
+.hr-status-pending {
+  background-color: #fff8e1;
+  color: #f39c12;
+}
+
+/* 详情信息卡片 */
+.hr-detail-card {
+  background-color: var(--bg-secondary);
+  border-radius: var(--radius-md);
+  padding: 16px;
+  margin-bottom: 16px;
+  border-left: 3px solid var(--primary-color);
+}
+
+.hr-detail-row {
+  display: flex;
+  margin-bottom: 8px;
+}
+
+.hr-detail-label {
+  font-weight: 500;
+  color: var(--text-secondary);
+  min-width: 120px;
+}
+
+.hr-detail-value {
+  color: var(--text-primary);
+  flex: 1;
+}
+
+/* 导入导出按钮样式 */
+.hr-import-export {
+  display: flex;
+  gap: 10px;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .hr-system-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .hr-system-search-area {
+    width: 100%;
+  }
+  
+  .hr-system-actions {
+    justify-content: center;
+  }
+  
+  .hr-system-table-container {
+    padding: 12px;
+  }
+  
+  .hr-form-row {
+    grid-template-columns: 1fr;
+  }
+  
+  .hr-system-pagination {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+}
+
+/* 数据表格样式增强 */
+.hr-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.hr-table th {
+  background-color: #f8f9fa;
+  font-weight: 600;
+  color: #495057;
+  text-align: left;
+  padding: 12px 16px;
+  border-bottom: 2px solid #dee2e6;
+  white-space: nowrap;
+}
+
+.hr-table td {
+  padding: 12px 16px;
+  border-bottom: 1px solid #dee2e6;
+  vertical-align: middle;
+}
+
+.hr-table tr:hover {
+  background-color: #f8f9fa;
+}
+
+.hr-table tr:last-child td {
+  border-bottom: none;
+}
+
+/* 空状态样式 */
+.hr-empty-state {
+  text-align: center;
+  padding: 40px;
+  color: var(--text-tertiary);
+}
+
+.hr-empty-state-icon {
+  font-size: 48px;
+  margin-bottom: 16px;
+  opacity: 0.5;
+}
+
+.hr-empty-state-text {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.hr-empty-state-subtext {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+/* 加载状态样式 */
+.hr-loading-state {
+  text-align: center;
+  padding: 40px;
+  color: var(--text-secondary);
+}
+
+.hr-loading-spinner {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  border: 3px solid var(--border-color);
+  border-top-color: var(--primary-color);
+  border-radius: 50%;
+  animation: spin 1s ease-in-out infinite;
+  margin-bottom: 16px;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* 工具提示样式 */
+.hr-tooltip {
+  position: relative;
+  cursor: help;
+}
+
+.hr-tooltip::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+  margin-bottom: 5px;
+}
+
+.hr-tooltip:hover::after {
+  opacity: 1;
+}

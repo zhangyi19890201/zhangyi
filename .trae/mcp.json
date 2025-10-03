@@ -1,0 +1,13 @@
+{
+  "mcpServers": [
+    {
+      "name": "spec-workflow",
+      "description": "Spec Workflow MCP 服务器，用于规范驱动开发",
+      "command": "npx",
+      "args": [
+        "@pimzino/spec-workflow-mcp@latest",
+        "."
+      ]
+    }
+  ]
+}

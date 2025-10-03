@@ -1,0 +1,199 @@
+/* 表格容器样式 */
+.data-table-container {
+  width: 100%;
+  overflow-x: auto;
+  margin: 0;
+  padding: 0;
+}
+
+/* 调整表头样式使其与对话框齐平 */
+.data-table__header-cell {
+  padding: 14px;
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  font-weight: 600;
+  color: #495057;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  box-sizing: border-box;
+}
+
+/* 表格样式 */
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  table-layout: auto;
+}
+
+/* 表头样式 */
+.data-table__header-cell {
+  padding: 14px;
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  font-weight: 600;
+  color: #495057;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+
+/* 单元格样式 */
+.data-table__cell {
+  padding: 14px;
+  border: 1px solid #dee2e6;
+  color: #212529;
+  text-align: center;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+/* 行样式 */
+.data-table__row {
+  transition: background-color 0.2s;
+}
+
+.data-table__row:hover {
+  background-color: #f8f9fa;
+}
+
+/* 加载状态 */
+.data-table__loading,
+.data-table__empty {
+  text-align: center;
+  padding: 40px;
+  color: #6c757d;
+}
+
+/* 操作按钮样式 */
+.data-table__actions {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+}
+
+.data-table__action-btn {
+  padding: 4px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.2s;
+}
+
+.data-table__action-btn.edit {
+  background-color: #007bff;
+  color: white;
+}
+
+.data-table__action-btn.edit:hover {
+  background-color: #0056b3;
+}
+
+.data-table__action-btn.delete {
+  background-color: #dc3545;
+  color: white;
+}
+
+.data-table__action-btn.delete:hover {
+  background-color: #c82333;
+}
+
+.data-table__action-btn.view {
+  background-color: #6c757d;
+  color: white;
+}
+
+.data-table__action-btn.view:hover {
+  background-color: #545b62;
+}
+
+/* 序号列样式 - 简化样式，保持一致性 */
+.index-header,
+.data-table__header-cell[data-column-key="index"],
+.data-table__cell[data-column-key="index"] {
+  width: 60px;
+  text-align: center;
+}
+
+/* 性别列样式 - 简化样式，保持一致性 */
+.gender-header,
+.data-table__header-cell[data-column-key="gender"],
+.data-table__cell.gender-cell,
+.data-table__cell[data-column-key="gender"] {
+  width: 60px;
+  text-align: center;
+}
+
+/* 年龄列样式 - 简化样式，保持一致性 */
+.age-header,
+.data-table__header-cell[data-column-key="age"],
+.data-table__cell.age-cell,
+.data-table__cell[data-column-key="age"] {
+  width: 60px;
+  text-align: center;
+}
+
+/* 确保表格行中的单元格都是表格单元格显示模式 */
+.data-table__row td {
+  display: table-cell !important;
+  float: none !important;
+}
+
+/* 优化列宽设置 */
+.data-table__header-cell[data-column-key="id"],
+.data-table__cell[data-column-key="id"] {
+  width: 80px;
+}
+
+.data-table__header-cell[data-column-key="employeeId"],
+.data-table__cell[data-column-key="employeeId"] {
+  width: 120px;
+}
+
+.data-table__header-cell[data-column-key="name"],
+.data-table__cell[data-column-key="name"] {
+  width: 120px;
+}
+
+/* 身份证号列样式 */
+.data-table__header-cell[data-column-key="idNumber"],
+.data-table__cell[data-column-key="idNumber"] {
+  width: 200px;
+}
+
+/* 联系方式列样式 */
+.data-table__header-cell[data-column-key="phone"],
+.data-table__cell[data-column-key="phone"] {
+  width: 150px;
+}
+
+/* 操作列样式 */
+.data-table__header-cell[data-column-key="action"],
+.data-table__cell[data-column-key="action"] {
+  width: 160px;
+}
+
+/* 确保表格单元格内的内容不会被分割到多行 */
+.data-table__cell span {
+  white-space: nowrap;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .data-table-container {
+    font-size: 14px;
+  }
+  
+  .data-table__header-cell,
+  .data-table__cell {
+    padding: 8px;
+  }
+  
+  .data-table__action-btn {
+    padding: 2px 8px;
+    font-size: 12px;
+  }
+}

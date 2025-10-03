@@ -1,0 +1,83 @@
+/* 按钮组容器样式 - 独立组件，避免样式冲突 */
+.task-button-group {
+  display: inline-flex !important;
+  align-items: center !important;
+  border: 1px solid #e0e6ed !important;
+  border-radius: 12px !important;
+  padding: 4px !important;
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%) !important;
+  margin-left: auto !important;
+  box-sizing: border-box !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05) !important;
+  position: relative !important;
+}
+
+/* 按钮样式 - 确保在组内正确显示 */
+.task-button-group__refresh-btn,
+.task-button-group__more-btn {
+  border: none !important;
+  background: transparent !important;
+  padding: 8px 12px !important;
+  cursor: pointer !important;
+  font-size: 14px !important;
+  transition: all 0.3s ease !important;
+  margin: 0 !important;
+  min-width: auto !important;
+  outline: none !important;
+  box-shadow: none !important;
+  border-radius: 8px !important;
+  position: relative !important;
+  overflow: hidden !important;
+  z-index: 1 !important;
+}
+
+/* 刷新按钮特殊样式 */
+.task-button-group__refresh-btn {
+  min-width: 36px !important;
+  text-align: center !important;
+  line-height: 1 !important;
+}
+
+/* 悬停效果 */
+.task-button-group__refresh-btn:hover,
+.task-button-group__more-btn:hover {
+  background: rgba(52, 152, 219, 0.1) !important;
+  color: #3498db !important;
+  transform: translateY(-1px) !important;
+}
+
+/* 点击效果 */
+.task-button-group__refresh-btn:active,
+.task-button-group__more-btn:active {
+  transform: translateY(0) !important;
+  background: rgba(52, 152, 219, 0.15) !important;
+}
+
+/* 按钮点击动画 */
+.task-button-group__refresh-btn::before,
+.task-button-group__more-btn::before {
+  content: '' !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: -100% !important;
+  width: 100% !important;
+  height: 100% !important;
+  background: linear-gradient(90deg, transparent, rgba(52, 152, 219, 0.1), transparent) !important;
+  transition: all 0.6s ease !important;
+  z-index: -1 !important;
+}
+
+.task-button-group__refresh-btn:hover::before,
+.task-button-group__more-btn:hover::before {
+  left: 100% !important;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .task-button-group {
+    margin-left: 0 !important;
+    margin-top: 12px !important;
+    justify-content: center !important;
+    width: 100% !important;
+  }
+}
